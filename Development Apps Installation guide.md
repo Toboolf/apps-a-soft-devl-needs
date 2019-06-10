@@ -18,14 +18,26 @@ This is a guide for the general apps and command-line tools that are required fo
 * [iTerm 2](#iterm)
 
 #### Via CLI [>>](#cli)
-* [On my Zsh!](#oh-my-zsh)
+* [XCode Command Line Tools](#xcode-cli)
 * [Brew](#brew)
-* [The Unarchiver](#the-unarchiver)
-* [The Unarchiver](#the-unarchiver)
-* [The Unarchiver](#the-unarchiver)
-* [The Unarchiver](#the-unarchiver)
-* [The Unarchiver](#the-unarchiver)
-* [The Unarchiver](#the-unarchiver)
+* [Zsh](#zsh)
+* [On my Zsh!](#oh-my-zsh)
+* [SdkMan!](#sdkman)
+
+#### Via SdkMan [>>](#via-sdkman)
+* [Gradle](#gradle)
+* [Groovy](#groovy)
+* [Groovy Serv](#groovy-serv)
+* [Maven](#maven)
+* [Kotlin](#kotlin)
+* [Scala](#scala)
+* [Micronaut](#micronaut)
+* [Spring Boot](#spring-boot)
+* [Grails](#grails)
+* [Vert.x](#vertx)
+
+#### Via Brew [>>](#via-brew)
+* [Gradle](#gradle)
 
 #### SSH Configuration [>>](#ssh)
 
@@ -40,6 +52,8 @@ Includes almost everything developers need to create applications for MacOS- [Ap
 #### Installation
 
 1. Download from AppStore (requires active apple account)
+2. Once installed open the XCode App and accept the terms of use
+3. It will start to install some components
 
 ## <a name="trello"></a> Trello
 
@@ -119,9 +133,46 @@ API Development Environment - [getpostman.com](https://www.getpostman.com/)
 2. UnZip
 3. Exec
 
+## <a name="sql-developer"></a> SQL Developer
+
+Database Manager ans Script execution - [oracle.com](https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html)
+
+#### Installation
+
+1. Download app from the [page](https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html)
+2. Oracle account is required
+3. UnZip
+4. Move Sql Developer app to Application Folder
+
 <br/>
 
 # <a name="cli"></a> Via CLI
+
+## <a name="xcode-cli"></a> XCode Command Line Tools
+
+Several command line tools for developers - [developer.apple.com](https://developer.apple.com/download/more/?=command%20line%20tools)
+
+#### Installation
+
+##### Installing from CLI
+
+1. From shell
+
+	```shell
+	xcode-select --install
+	```
+2. You will be prompted to accept terms and conditions
+3. Components will start to download
+
+	
+##### Installing via web dmg download
+
+1. Access the download page [here](https://developer.apple.com/download/more/?=command%20line%20tools)
+2. An apple developer account is required
+3. Select the version needed for you iMac and version of XCode (you can check the version openning XCode and in the top menu XCode > About XCode) ans download
+4. Exec Command_Line_Tools.dmg
+5. Double click Command Line Tools.pkg
+6. Follow instructions and accept terms and conditions
 
 ## <a name="brew"></a> Brew (Homebrew)
 
@@ -136,14 +187,182 @@ Gestor de paquetes para MacOS - [brew.sh](https://brew.sh)
 ```
 2. Move iTerm to `~/Applications/` folder
 
+## <a name="zsh"></a> Zsh
+
+* Web page: [github.com](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
+
+#### Installation
+
+1. Run the following command
+
+	```shell
+	brew install zsh zsh-completions
+	```
+2. To set Zsh as default shell run:
+
+	```shell
+	chsh -s /bin/zsh
+	```
+
 ## <a name="oh-my-zsh"></a> Oh my zsh !
 
 * Web page: [ohmyz.sh](https://ohmyz.sh/)
 
 #### Installation
 
-1. Download app from the pageapp
-2. Move iTerm to `~/Applications/` folder
+1. Via curl:
+
+	```shell
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	```
+	
+## <a name="sdkman"></a> SdkMan!
+
+Software Developer Kit Manager - [sdkman.io](https://sdkman.io/)
+
+#### Installation
+
+1. Via curl:
+
+	```shell
+	curl -s "https://get.sdkman.io" | bash
+	```
+2. Reaload source for the changes to take effect
+
+	```shell
+	source "$HOME/.sdkman/bin/sdkman-init.sh"
+	```
+3. Check if averything went well:
+
+	```shell
+	sdk version
+	```
+	
+<br/>
+
+# <a name="via-sdkman"></a> Via SdkMan
+	
+## <a name="gradle"></a> Gradle
+
+Gradle is an open-source build automation tool focused on flexibility and performance - [gradle.org](https://gradle.org/)
+
+#### Installation
+
+1. Via sdkman:
+
+	```shell
+	sdk install gradle
+	```
+	
+## <a name="groovy"></a> Groovy
+
+Groovy is a powerful, optionally typed and dynamic language, with static-typing and static compilation capabilities, for the Java platform - [groovy-lang.org](http://groovy-lang.org/)
+
+#### Installation
+
+1. Via sdkman:
+
+	```shell
+	sdk install groovy
+	```
+
+## <a name="groovy-serv"></a> GroovyServ
+
+GroovyServ reduces startup time of the JVM for runnning Groovy significantly - [github.io](https://kobo.github.io/groovyserv/)
+
+#### Installation
+
+1. Via sdkman:
+
+	```shell
+	sdk install groovy
+	```
+	
+## <a name="maven"></a> Maven
+
+Apache Maven is a software project management and comprehension tool - [maven.apache.org](https://maven.apache.org/)
+
+#### Installation
+
+1. Via sdkman:
+
+	```shell
+	sdk install maven
+	```
+	
+## <a name="kotlin"></a> Kotlin
+
+Kotlin is a statically-typed programming language that runs on the Java Virtual
+Machine and can also be compiled to JavaScript source code - [kotlinlang-org](https://kotlinlang.org/)
+
+#### Installation
+
+1. Via sdkman:
+
+	```shell
+	sdk install kotlin
+	```
+
+## <a name="scala"></a> Scala
+
+Scala is a programming language for general software applications - [scala-lang.org](http://www.scala-lang.org/)
+
+#### Installation
+
+1. Via sdkman:
+
+	```shell
+	sdk install scala
+	```
+	
+## <a name="micronaut"></a> Micronaut
+
+Micronaut is an open source microservice framework for the JVM - [micronaut.io](http://micronaut.io/)
+
+#### Installation
+
+1. Via sdkman:
+
+	```shell
+	sdk install micronaut
+	```
+	
+## <a name="spring-boot"></a> Spring Boot 2
+
+Spring Boot takes an opinionated view of building production-ready Spring
+applications - [projects.spring.io](http://projects.spring.io/spring-boot/)
+
+#### Installation
+
+1. Via sdkman:
+
+	```shell
+	sdk install springboot
+	```
+	
+## <a name="grails"></a> Grails
+
+Grails is a powerful web framework, for the Java platform - [grails.org](https://grails.org/)
+
+#### Installation
+
+1. Via sdkman:
+
+	```shell
+	sdk install grails 2.5.6
+	```
+
+## <a name="vertx"></a> Vert.x
+
+Vert.x is a tool-kit for building reactive applications on the JVM - [vertx.io](http://vertx.io/)
+
+#### Installation
+
+1. Via sdkman:
+
+	```shell
+	sdk install vertx
+	```
 
 <br/>
 
