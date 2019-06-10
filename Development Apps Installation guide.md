@@ -55,7 +55,6 @@ This is a guide for the general apps and command-line tools that are required fo
 
 * [Erlang](#erlang)
 * [Elixir](#elixir)
-* [Phoenix](#phoenix)
 
 #### SSH Configuration [>>](#ssh)
 
@@ -670,6 +669,53 @@ Manage multiple runtime versions with a single CLI tool - [asdf-vm.com](https://
 	  coreutils automake autoconf openssl \
 	  libyaml readline libxslt libtool unixodbc \
 	  unzip curl
+	```
+	
+## <a name="siege"></a> Siege
+
+Siege is an http load testing and benchmarking utility - [joedog.org](https://www.joedog.org/siege-home/)
+
+#### Installation
+
+1. Via Brew:
+
+	```shell
+	brew install siege
+	```
+	
+## <a name="postgresql"></a> PostgreSQL
+
+PostgreSQL is a powerful, open source object-relational database  - [postgresql.org](https://www.postgresql.org/)
+
+#### Installation
+
+1. Via Brew:
+
+	```shell
+	brew install postgresql
+	ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+	```
+2. Add alias to `.zshrc`:
+
+	```shell
+	alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+	alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+	```
+	
+	Or run the following commands(be careful with the SDKMAN config):
+	
+	```shell
+	echo 'alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"' >> ~/.zshrc
+	echo 'alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"' >> ~/.zshrc
+	```
+	
+3. Config PostgreSQL
+
+	```shell
+	source ~/.zshrc
+	pg_start
+	createdb `whoami`
+	pg_stop
 	```
 
 <br/>
