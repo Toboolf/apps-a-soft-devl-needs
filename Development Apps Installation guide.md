@@ -238,6 +238,74 @@ Software Developer Kit Manager - [sdkman.io](https://sdkman.io/)
 	sdk version
 	```
 	
+## <a name="nvm"></a> NVM
+
+Node Version Manager - [github.io](https://github.com/nvm-sh/nvm)
+
+#### Installation
+
+1. Via curl:
+
+	```shell
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+	```
+2. Add the following lines to your `.zshrc` file:
+
+	```shell
+	export NVM_DIR="$HOME/.nvm"
+	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+	```
+	
+	You can use the following to automatically add them:
+	
+	```shell
+	echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
+	echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.zshrc
+	echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.zshrc
+	```
+3. Reopen the terminal or:
+
+	```shell
+	source ~/.zshrc
+	```
+
+4.	Install the most recent version of node:
+
+	```shell
+	nvm install node
+	```
+	
+## <a name="bower"></a> Bower
+
+A package manager for the web - [bower.io](https://bower.io/)
+
+#### Installation
+
+1. Via npm:
+
+	```shell
+	npm install -g bower
+	```
+	
+## <a name="vim"></a> Vim Plugins
+
+Plugins for vim - [sohjiro/.vim](https://github.com/sohjiro/.vim)
+
+#### Installation
+
+1. Via curl:
+
+	```shell
+	curl -L https://raw.githubusercontent.com/sohjiro/.vim/master/run_config.sh | sh
+	```
+2. Open ´vim´ and run the following command:
+
+	```shell
+	:PlugInstall
+	```
+3. Reopne terminal
+	
 <br/>
 
 # <a name="via-sdkman"></a> Via SdkMan
@@ -362,6 +430,193 @@ Vert.x is a tool-kit for building reactive applications on the JVM - [vertx.io](
 
 	```shell
 	sdk install vertx
+	```
+	
+<br/>
+
+# <a name="via-brew"></a> Via Brew
+
+## <a name="yarn"></a> Yarn
+
+Yarn is a package manager for your code. It allows you to use and share code with other developers from around the world - [yarnpkg.com](https://yarnpkg.com)
+
+#### Installation
+
+1. Via Brew:
+
+	```shell
+	brew install yarn
+	```
+	
+## <a name="httpie"></a> HTTPie
+
+HTTPie—aitch-tee-tee-pie—is a command line HTTP client with an intuitive UI, JSON support, syntax highlighting, wget-like downloads, plugins, and more - [httpie.org](https://httpie.org/)
+
+#### Installation
+
+1. Via Brew:
+
+	```shell
+	brew install httpie
+	```
+
+## <a name="blueutil"></a> blueutil
+
+CLI for bluetooth on OSX: power, discoverable state, list, inquire devices, connect, info - [github.com/toy](https://github.com/toy/blueutil)
+
+#### Installation
+
+1. Via Brew:
+
+	```shell
+	brew install blueutil
+	```
+
+## <a name="jenv"></a> jEnv
+
+jEnv is a command line tool to help you forget how to set the JAVA_HOME environment variable - [jenv.be](https://www.jenv.be/)
+
+#### Installation
+
+1. Via Brew:
+
+	```shell
+	brew install jenv
+	```
+2. Add the following lines to the end of `.zshrc` file:
+
+	```shell
+	export PATH="$HOME/.jenv/bin:$PATH"
+	eval "$(jenv init -)"
+	```
+	You can exec this directly but be carefull with the SDKMAN config:
+	
+	```shell
+	echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
+	echo 'eval "$(jenv init -)"' >> ~/.zshrc
+	```
+3. Add your downloaded JDK like so:
+
+	```shell
+	jenv add /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+	jenv add /Library/Java/JavaVirtualMachines/jdk17011.jdk/Contents/Home
+	```
+	
+## <a name="tmux"></a> Tmux
+
+Terminal multiplexer - [tmux](https://github.com/tmux/tmux/wiki)
+
+#### Installation
+
+1. Via Brew:
+
+	```shell
+	brew install tmux
+	```
+2. Create tmux config file:
+
+	```shell
+	touch ~/.tmux.conf
+	```
+3. Exec the following command to add lines to `~/.tmux.conf`:
+
+	```shell
+	cat >> ~/.tmux.conf <<EOL
+	#option -g default-command "reattach-to-user-namespace -l zsh"
+	set -g prefix C-a
+	unbind C-b
+	set -sg escape-time 1
+	set -g base-index 1
+	setw -g pane-base-index 1
+	bind r source-file ~/.tmux.conf \; display "Configuración recargada"
+	bind C-a send-prefix
+	bind | split-window -h -c "#{pane_current_path}"
+	bind - split-window -v -c "#{pane_current_path}"
+	bind c new-window -c "#{pane_current_path}"
+	bind h select-pane -L
+	bind j select-pane -D
+	bind k select-pane -U
+	bind l select-pane -R
+	bind -r C-h select-window -t :-
+	bind -r C-l select-window -t :+
+	bind -r H resize-pane -L 5
+	bind -r J resize-pane -D 5
+	bind -r K resize-pane -U 6
+	bind -r L resize-pane -R 5
+	setw -g mode-mouse off
+	set -g mouse-select-pane off
+	set -g mouse-resize-pane off
+	#set mouse-select-window off
+	set -g default-terminal "screen-256color"
+	set -g status-fg white
+	set -g status-bg black
+	setw -g window-status-fg cyan
+	setw -g window-status-bg default
+	setw -g window-status-attr dim
+	setw -g window-status-current-fg white
+	setw -g window-status-current-bg red
+	setw -g window-status-current-attr bright
+	set -g pane-border-fg green
+	set -g pane-border-bg black
+	set -g pane-active-border-fg white
+	set -g pane-active-border-bg yellow
+	set -g message-fg white
+	set -g message-bg black
+	set -g message-attr bright
+	set -g status-left-length 40
+	set -g status-left "#[fg=green]Session: #S #[fg=yellow]#I #[fg=cyan]#P"
+	set -g status-right "#[fg=cyan]%d %b %R"
+	setw -g utf8 on
+	set -g status-utf8 on
+	set -g status-interval 60
+	set -g status-justify centre
+	setw -g monitor-activity on
+	set -g visual-activity on
+	setw -g mode-keys vi
+	unbind [
+	bind Escape copy-mode
+	unbind p
+	bind p paste-buffer
+	bind -t vi-copy 'v' begin-selection
+	bind -t vi-copy 'y' copy-selection
+	bind -n C-k send-keys -R \; clear-history
+	EOL
+	```
+		
+## <a name="git-extras"></a> Git Extras
+
+Little git extras - [tj/git-extras](https://github.com/tj/git-extras)
+
+#### Installation
+
+1. Via Brew:
+
+	```shell
+	brew install git-extras
+	```
+	
+## <a name="docker"></a> Docker
+
+Enterprise Container Platform for High-Velocity Innovation - [docker.com](https://www.docker.com/)
+
+#### Installation
+
+1. Via Brew:
+
+	```shell
+	brew cask install docker
+	```
+2. Install docker
+
+	```shell
+	brew install docker
+	brew install docker-completion
+	```
+	
+3. Install docker-machine
+
+	```shell
+	brew install docker-machine
 	```
 
 <br/>
