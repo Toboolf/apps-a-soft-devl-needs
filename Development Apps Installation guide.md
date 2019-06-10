@@ -14,8 +14,10 @@ This is a guide for the general apps and command-line tools that are required fo
 * [iTerm 2](#iterm)
 * [Slack](#slack)
 * [MacDown](#mac-down)
-* [iTerm 2](#iterm)
-* [iTerm 2](#iterm)
+* [SoapUI](#soapui)
+* [IntelliJ IDEA](#intellij)
+* [Postman](#postman)
+* [SQL Developer](#sql-developer)
 
 #### Via CLI [>>](#cli)
 * [XCode Command Line Tools](#xcode-cli)
@@ -23,6 +25,9 @@ This is a guide for the general apps and command-line tools that are required fo
 * [Zsh](#zsh)
 * [On my Zsh!](#oh-my-zsh)
 * [SdkMan!](#sdkman)
+* [Node Version Manager - NVM](#nvm)
+* [Bower](#bower)
+* [Vim Plugins](#vim)
 
 #### Via SdkMan [>>](#via-sdkman)
 * [Gradle](#gradle)
@@ -37,7 +42,20 @@ This is a guide for the general apps and command-line tools that are required fo
 * [Vert.x](#vertx)
 
 #### Via Brew [>>](#via-brew)
-* [Gradle](#gradle)
+* [Yarn](#yarn)
+* [HTTPie](#httpie)
+* [BlueUtil](#blueutil)
+* [jEnv](#jenv)
+* [Tmux](#tmux)
+* [Git-Extras](#git-extras)
+* [Dockjer](#docker)
+* [asdf-vm](#asdf)
+
+#### Via asdf [>>](#via-asdf)
+
+* [Erlang](#erlang)
+* [Elixir](#elixir)
+* [Phoenix](#phoenix)
 
 #### SSH Configuration [>>](#ssh)
 
