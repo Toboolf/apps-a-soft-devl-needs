@@ -674,6 +674,38 @@ Manage multiple runtime versions with a single CLI tool - [asdf-vm.com](https://
 
 <br/>
 
+# <a name="via-asdf"></a> Via asdf
+
+## <a name="erlang"></a> Erlang
+
+Erlang is a programming language used to build massively scalable soft real-time systems with requirements on high availability - [erlang.org](https://www.erlang.org/)
+
+#### Installation
+
+1. Via asdf:
+
+	```shell
+	asdf plugin-add erlang
+	asdf install erlang 22.0.2
+	asdf global erlang 22.0.2
+	```
+
+## <a name="elixir"></a> Elixir
+
+Elixir is a dynamic, functional language designed for building scalable and maintainable applications - [elixir-lang.org](https://elixir-lang.org/)
+
+#### Installation
+
+1. Via asdf:
+
+	```shell
+	asdf plugin-add elixir
+	asdf install elixir 1.8.2
+	asdf global elixir 1.8.2
+	```
+
+<br/>
+
 # <a name="ssh"></a> SSH Configuration
 
 The following steps are intended to create a new pair of keys and add them, to the agent in order to start it automatically and not enter out password every time we need to use SSH.
