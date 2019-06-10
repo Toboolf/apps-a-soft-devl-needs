@@ -619,6 +619,41 @@ Enterprise Container Platform for High-Velocity Innovation - [docker.com](https:
 	brew install docker-machine
 	```
 
+## <a name="asdf"></a> asdf-vm
+
+Manage multiple runtime versions with a single CLI tool - [asdf-vm.com](https://asdf-vm.com/#/)
+
+#### Installation
+
+1. Via Brew:
+
+	```shell
+	brew install asdf
+	```
+	
+2. Add the following lines to the `.zshrc` file:
+
+	```shell
+	. /usr/local/opt/asdf/asdf.sh
+	. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+	```
+	
+	Or for automatically do it(be carefull with sdkman config):
+	
+	```shell
+	echo -e '\n. /usr/local/opt/asdf/asdf.sh' >> ~/.zshrc
+	echo -e '\n. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash' >> ~/.zshrc
+	```
+	
+3. Install plugin common dependencies:
+
+	```shell
+	brew install \
+	  coreutils automake autoconf openssl \
+	  libyaml readline libxslt libtool unixodbc \
+	  unzip curl
+	```
+
 <br/>
 
 # <a name="ssh"></a> SSH Configuration
