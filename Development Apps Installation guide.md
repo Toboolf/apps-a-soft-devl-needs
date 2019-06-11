@@ -20,6 +20,7 @@ This is a guide for the general apps and command-line tools that are required fo
 * [SQL Developer](#sql-developer)
 * [Visual Studio Code](#vs-code)
 * [Opera](#opera)
+* [Gatlin](#Gatlin)
 
 #### Via CLI [>>](#cli)
 * [XCode Command Line Tools](#xcode-cli)
@@ -186,7 +187,7 @@ Navegador con VPN gratuita, bloqueador de publicidad rápido, soporte Web 3, con
 
 ## <a name="gatlin"></a> Gatlin
 
-Navegador con VPN gratuita, bloqueador de publicidad rápido, soporte Web 3, control de experiencia de navegación - [gatlin.io](https://gatling.io/)
+Gatling is a highly capable load testing tool. It is designed for ease of use, maintainability and high performance - [gatlin.io](https://gatling.io/)
 
 #### Installation
 
