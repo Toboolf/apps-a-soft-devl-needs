@@ -18,6 +18,8 @@ This is a guide for the general apps and command-line tools that are required fo
 * [IntelliJ IDEA](#intellij)
 * [Postman](#postman)
 * [SQL Developer](#sql-developer)
+* [Visual Studio Code](#vs-code)
+* [Opera](#opera)
 
 #### Via CLI [>>](#cli)
 * [XCode Command Line Tools](#xcode-cli)
@@ -160,6 +162,37 @@ Database Manager ans Script execution - [oracle.com](https://www.oracle.com/tech
 2. Oracle account is required
 3. UnZip
 4. Move Sql Developer app to Application Folder
+
+## <a name="vs-code"></a> Visual Studio Code
+
+Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Java, Python, PHP, Go) and runtimes (such as .NET and Unity) - [visualstudio.com](https://code.visualstudio.com/)
+
+#### Installation
+
+1. Download app from the [page](https://code.visualstudio.com/docs/?dv=osx)
+2. UnZip
+3. Move Visual Studio Code app to Application Folder
+
+## <a name="opera"></a> Opera
+
+Navegador con VPN gratuita, bloqueador de publicidad rápido, soporte Web 3, control de experiencia de navegación - [opera.com](https://www.opera.com/es-419)
+
+#### Installation
+
+1. Download app from the [page](https://www.opera.com/es-419/computer/thanks?ni=stable&os=mac)
+2. UnZip
+3. Exec installer
+4. Follow instructions
+
+## <a name="gatlin"></a> Gatlin
+
+Navegador con VPN gratuita, bloqueador de publicidad rápido, soporte Web 3, control de experiencia de navegación - [gatlin.io](https://gatling.io/)
+
+#### Installation
+
+1. Download app from the [page](https://gatling.io/download/)
+2. UnZip
+3. Move folder to your preferred path
 
 <br/>
 
