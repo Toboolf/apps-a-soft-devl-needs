@@ -252,7 +252,6 @@ Gestor de paquetes para MacOS - [brew.sh](https://brew.sh)
 ```shell
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
-2. Move iTerm to `~/Applications/` folder
 
 ## <a name="zsh"></a> Zsh
 
