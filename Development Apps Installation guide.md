@@ -21,6 +21,7 @@ This is a guide for the general apps and command-line tools that are required fo
 * [Visual Studio Code](#vs-code)
 * [Opera](#opera)
 * [Gatlin](#Gatlin)
+* [iReports](#ireports)
 
 #### Via CLI [>>](#cli)
 * [XCode Command Line Tools](#xcode-cli)
@@ -194,6 +195,21 @@ Gatling is a highly capable load testing tool. It is designed for ease of use, m
 1. Download app from the [page](https://gatling.io/download/)
 2. UnZip
 3. Move folder to your preferred path
+
+## <a name="ireports"></a> iReports
+
+Visual designer tool for JasperReports Library and JasperReports Server (Business Intelligence) - [community.jaspersoft.com](https://community.jaspersoft.com/project/ireport-designer)
+
+#### Installation
+
+1. Download app from the [page](https://sourceforge.net/projects/ireport/)
+2. Exec dmg
+3. Move Jaspersoft iReport Designer app to `~/Applcations` folder
+4. Path to JDK 7 must be set in the App conf, run the following command, the path must be to your own jdk 7:
+
+	```shell
+	echo 'jdkhome="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home"' >> /Applications/Jaspersoft\ iReport\ Designer.app/Contents/Resources/ireport/etc/ireport.conf
+	```
 
 <br/>
 
